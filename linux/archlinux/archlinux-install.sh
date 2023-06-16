@@ -8,7 +8,7 @@
 # mkfs.ext4 /dev/root_partition
 # mkswap /dev/swap_partition
 # mount /dev/root_partition /mnt
-swapon /dev/swap_partition
+# swapon /dev/swap_partition
 
 fdisk /dev/sda
 mkfs.ext4 /dev/sda1
