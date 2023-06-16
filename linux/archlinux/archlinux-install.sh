@@ -8,11 +8,13 @@
 # mkfs.ext4 /dev/root_partition
 # mkswap /dev/swap_partition
 # mount /dev/root_partition /mnt
+swapon /dev/swap_partition
 
 fdisk /dev/sda
 mkfs.ext4 /dev/sda1
 mkswap /dev/sda2
 mount /dev/sda1 /mnt
+swapon /dev/sda2
 
 
 useradd -m stealth
