@@ -34,4 +34,6 @@ pacman -S grub
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
+pacman -S cronie dhclient
+
 reboot
