@@ -17,7 +17,7 @@ mount /dev/sda1 /mnt
 swapon /dev/sda2
 
 pacstrap -K /mnt base linux linux-firmware
-getfstab -U /mnt >> /mnt/etc/fstab
+genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 
 pacman -S vim
