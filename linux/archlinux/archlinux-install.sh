@@ -16,8 +16,18 @@ mkswap /dev/sda2
 mount /dev/sda1 /mnt
 swapon /dev/sda2
 
-
-useradd -m stealth
-passwd stealth
+pacstrap -K /mnt base linux linux-firmware
+getfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
 
 pacman -S vim
+
+vim /etc/locale.gen
+locale-gen
+
+vim /etc/hostname
+
+passwd
+useradd -m stealth
+passwd stealth
+reboot
