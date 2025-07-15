@@ -19,7 +19,8 @@ pacstrap -K /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 
-pacman -S vim
+pacman -S grub
+pacman -S cronie dhclient openssh vim
 
 vim /etc/locale.gen
 locale-gen
@@ -30,10 +31,9 @@ passwd
 useradd -m stealth
 passwd stealth
 
-pacman -S grub
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-pacman -S cronie dhclient openssh
+pacman -S xmrig
 
 reboot
