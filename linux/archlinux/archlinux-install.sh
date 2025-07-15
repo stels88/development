@@ -35,6 +35,7 @@ grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S xmrig
+pacman -S opencl-nvidia
 pacman -S cuda-toolkit
 
 reboot
