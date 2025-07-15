@@ -29,4 +29,9 @@ vim /etc/hostname
 passwd
 useradd -m stealth
 passwd stealth
+
+pacman -S grub
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
 reboot
