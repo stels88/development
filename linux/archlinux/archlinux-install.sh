@@ -34,6 +34,6 @@ pacman -S grub
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-pacman -S cronie dhclient
+pacman -S cronie dhclient openssh
 
 reboot
